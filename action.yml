@@ -12,6 +12,10 @@ inputs:
   content:
     description: 'New content'
     required: true
+  count:
+    description: 'Total replaceable count'
+    required: false
+    default: '1'
 
 runs:
   using: node16
