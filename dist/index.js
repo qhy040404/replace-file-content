@@ -100,9 +100,14 @@ function run() {
         const file_name = core.getInput('file', { required: true });
         const past_data = core.getInput('past', { required: true });
         const new_data = core.getInput('content', { required: true });
+        const count = parseInt(core.getInput('count'));
+        let timer = 0;
         const file = yield (0, file_helper_1.findFiles)(file_name);
         let data = fs.readFileSync(file, 'utf8');
-        data = data.replace(past_data, new_data);
+        while (timer < count) {
+            timer++;
+            data = data.replace(past_data, new_data);
+        }
         try {
             fs.writeFileSync(file, data, 'utf8');
             core.info('File overwritten');
