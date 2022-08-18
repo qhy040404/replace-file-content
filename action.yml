@@ -1,0 +1,18 @@
+name: 'Replace File Content'
+description: 'A GitHub action to replace content in files'
+author: 'qhy040404'
+
+inputs:
+  file:
+    description: 'File name'
+    required: true
+  past:
+    description: 'Old content'
+    required: true
+  content:
+    description: 'New content'
+    required: true
+
+runs:
+  using: node16
+  main: dist/index.js
