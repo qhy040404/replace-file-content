@@ -21,7 +21,7 @@ async function run() {
     }
 
     try {
-        log(data)
+        log(`${data}`)
         fs.writeFileSync(file, data, 'utf8')
         core.info('File overwritten')
     } catch (e) {
