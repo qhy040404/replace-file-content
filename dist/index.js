@@ -43,7 +43,7 @@ exports.findFiles = void 0;
 const glob = __importStar(__nccwpck_require__(2760));
 function findFiles(name) {
     return __awaiter(this, void 0, void 0, function* () {
-        const globber = yield glob.create(`${name}`);
+        const globber = yield glob.create(name);
         const files = yield globber.glob();
         return files[0];
     });
