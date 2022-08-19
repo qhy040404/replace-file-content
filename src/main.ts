@@ -1,6 +1,7 @@
 import * as core from '@actions/core'
 import * as fs from 'fs-extra'
 import {findFiles} from "./file-helper";
+import {log} from "./debug-tool";
 
 async function run() {
     core.info('Import input datas')
@@ -15,10 +16,12 @@ async function run() {
     let data = fs.readFileSync(file, 'utf8')
     while (timer < count) {
         timer++
+        log(`timer=${timer}`)
         data = data.replace(past_data, new_data)
     }
 
     try {
+        log(data)
         fs.writeFileSync(file, data, 'utf8')
         core.info('File overwritten')
     } catch (e) {
