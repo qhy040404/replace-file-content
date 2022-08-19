@@ -11,6 +11,11 @@ async function run() {
     const count = parseInt(core.getInput('count'))
     let timer = 0
 
+    log(file_name)
+    log(past_data)
+    log(new_data)
+    log(count)
+
     const file = await findFiles(file_name)
 
     let data = fs.readFileSync(file, 'utf8')
