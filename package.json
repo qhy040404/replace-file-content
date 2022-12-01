@@ -1,7 +1,7 @@
 {
   "name": "replace-file-content",
   "description": "A GitHub action to replace content in files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qhy040404/replace-file-content.git"
@@ -11,6 +11,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/qhy040404/replace-file-content/issues"
+  },
+  "scripts": {
+    "build": "npm install && tsc && ncc build .\\lib\\main.js --license licenses.txt"
   },
   "dependencies": {
     "@actions/core": "1.10.0",
