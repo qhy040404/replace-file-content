@@ -1,7 +1,7 @@
 {
   "name": "replace-file-content",
   "description": "A GitHub action to replace content in files",
-  "version": "1.0.1",
+  "version": "1.1.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qhy040404/replace-file-content.git"
