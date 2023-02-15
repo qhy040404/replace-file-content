@@ -11,6 +11,7 @@ async function run() {
     let timer = 0
 
     const file = await findFiles(file_name)
+    core.debug(file)
 
     let data = fs.readFileSync(file, 'utf8')
     while (timer < count) {
